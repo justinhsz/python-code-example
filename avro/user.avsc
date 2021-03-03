@@ -1,0 +1,38 @@
+{
+    "namespace": "user.profile",
+    "type": "record",
+    "name": "User",
+    "fields": [
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "age",
+            "type": "int"
+        },
+        {
+            "name": "favorite_books",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "name": "Book",
+                    "fields": [
+                        {
+                            "name": "name",
+                            "type": "string"
+                        },{
+                            "name": "publish_year",
+                            "type": "int"
+                        },{
+                            "name": "author",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+
+        }
+    ]
+}
